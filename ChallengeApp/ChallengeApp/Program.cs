@@ -1,34 +1,34 @@
 ﻿
-// Zadanie domowe dzień 4
+using System.Globalization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
-//Jeżeli jesteś kobietą a czujesz się meżczyzną albo odwrotnie ten program nie jest dla ciebie przepraszam :)
 
-var name = "Ewa";
-var gender = "kobieta";
-var age = 23;
-
-Console.WriteLine("\n");
-
-if (gender == "kobieta")
+var number =5345346;
+string numberInString = number.ToString();
+char[] letters = numberInString.ToArray();
+int[] wynik = new int[10];
+int z = 0;
+foreach (int x in wynik)//zerowanie tablicy
 {
-    if (name == "Ewa" && age == 33)
-    {
-        Console.WriteLine(name + ", lat " + age);
-    }
-    else if (age < 30)
-    {
-        Console.WriteLine("Kobieta poniżej 30 lat.");
-    }
-    else
-    {
-        Console.WriteLine("Masz na imię " + name + " jesteś " + gender + " oraz masz " + age + " lat.");
-    }
+    wynik[x] = 0;
 }
-else if (age >= 18)
+
+foreach(char letter in letters)
 {
-    Console.WriteLine("Mężczyzna pełnoletni");
+    if (letter == '0') { wynik[0]++; }
+    else if (letter == '1') { wynik[1]++;}
+    else if (letter == '2') { wynik[2]++; }
+    else if (letter == '3') { wynik[3]++; }
+    else if (letter == '4') { wynik[4]++; }
+    else if (letter == '5') { wynik[5]++; }
+    else if (letter == '6') { wynik[6]++; }
+    else if (letter == '7') { wynik[7]++; }
+    else if (letter == '8') { wynik[8]++; }
+    else    { wynik[9]++; }
 }
-else
+Console.WriteLine("Liczba w zadaniu to: "+number+"\n");
+foreach(int i in wynik)
 {
-    Console.WriteLine("Mężczyzna niepełnoletni");
+    Console.WriteLine(z+" występuje: "+i + " razy");
+    z++;
 }
